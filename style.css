@@ -1,0 +1,263 @@
+/*
+html{
+  scroll-behavior: smooth;
+}
+*/
+
+
+body {
+  /*background: rgba(0, 0, 0, 0.9);*/
+  margin: 0;
+  color: white;
+  /*font-family: bookman old style;
+  font-style: italic;*/
+  font-family: 'Satisfy', cursive;
+}
+.nav .current{
+  color: #ff751a;
+}
+
+.showcase::after {
+  content: '';
+  height: 100vh;
+  width: 100%;
+  background-image: url('./images/close-up-of-coffee-cup-on-table-312418.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  filter: blur(10px);
+
+
+ /* -webkit-filter: blur(10px);*/
+ /* transition: all 1000ms; */
+}
+
+.showcase:hover::after {
+  filter: blur(0px);
+ /* -webkit-filter: blur(0px); */
+}
+
+
+ 
+/************************************************HOME-PAGE**************************************************/
+
+.content {
+  position: absolute;
+  z-index: 1;
+  top: 0%;
+  left: 12%;
+  margin-top: 80px;
+  margin-left: -145px;
+  width: 300px;
+  height: 350px;
+  text-align: center;
+  animation: slideRight 4s ease;
+
+ /* transition: all 1000ms; */
+}
+
+
+@keyframes slideRight{
+  0%{transform: translateX(100%);opacity:0}
+  100%{transform: translateX(0);opacity:1}
+}
+.content .title {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  font-family: 'Lobster', cursive;
+}
+
+.content .text {
+  line-height: 1.7;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-family: 'Lobster', cursive;
+}
+.content .logo{
+  color: #ff751a;
+}
+
+
+.content .logo:hover{
+  color: brown;
+  
+}
+
+
+
+/*******************************************NAVIGATION***********************************************************/
+
+
+.nav{
+  position: absolute;
+  z-index: 1;
+  animation: slideRight 4s ease;
+  left: 52%;
+  top: 5%;
+}
+.nav li{
+  display: inline; 
+  padding: 0 20px 0 20px;
+  font-size: 20px;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+  color: brown;
+}
+
+/*************************************************************************************************************/
+
+section{
+  background:white;
+
+}
+
+.title-1 {
+  color: #ff751a;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-family: 'Lobster', cursive;
+  animation: slideRight 4s ease;
+  text-decoration:underline;
+  text-decoration-color: orange; 
+}
+.title-1:hover{
+  color: brown;
+}
+.image{
+  width: auto;
+  margin: 30px;
+  background-color: black;
+}
+
+.image .imgs img{
+  margin-top: 10px; 
+  margin-left: 25px;
+  width: 30%;
+  display: inline-grid;
+  border:white 3px solid;
+}
+/***************************************************************************************************************/
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+#newsletter{
+  padding:15px;
+  color:#ffffff;
+  background:#ff751a;
+}
+
+#newsletter h1{
+  float:left;
+}
+
+#newsletter form {
+  float:right;
+  margin-top:15px;
+}
+
+#newsletter input[type="email"]{
+  padding:4px;
+  height:25px;
+  width:250px;
+}
+.button_1{
+  color: white;
+  background:orange; 
+}
+.button_1:hover{
+  color: brown;
+}
+
+/**********************************************ABOUT-PAGE*******************************************************/
+
+.about::after {
+  content: '';
+  height: 100vh;
+  width: auto;
+  background-image: url('./images/art-cafe-caffeine-close-up-302891.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  filter: blur(5px);
+}
+
+.about:hover::after {
+  filter: blur(0px);
+}
+
+.c-about {
+  position: absolute;
+  z-index: 1;
+  left: 15%;
+  margin-top: 10px;
+  margin-left: -145px;
+  margin-right: 65%;
+  width: auto;
+  height: 350px;
+  animation: slideRight 4s ease;
+}
+
+@keyframes slideRight{
+  0%{transform: translateX(100%);opacity:0}
+  100%{transform: translateX(0);opacity:1}
+}
+.c-about .a {
+  font-size: 40px ;
+  margin-top: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.c-about .b {
+  line-height: 1.2;
+  font-size: 25px;
+  margin-top: 1rem;
+  text-align: justify;
+  color: #ff751a;  
+}
+
+
+/**********************************************************************************************************/
+/* Small Screens */
+@media (max-width: 560px) {
+  .showcase::after {
+    height: 50vh;
+  }
+
+  .content {
+    top: 5%;
+    margin-top: 5px;
+  }
+
+  .content .text {
+    display: none;
+  }
+
+
+}
+
+/* Landscape */
+@media (max-height: 500px) {
+  .content .title,
+  .content .text {
+    display: none;
+  }
+
+  .content {
+    top: 0;
+  }
+}
